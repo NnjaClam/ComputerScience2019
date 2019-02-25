@@ -1,0 +1,44 @@
+import turtle
+t = turtle.Pen()
+t.speed(100)
+def pencolor():
+    raw2 = input("What color would you like it to be? \n 1. Blue \n 2. Green \n 3. Yellow \n 4. Red")
+    if (raw2 == "1"):
+        t.pencolor("Blue")
+    if (raw2 == "2"):
+        t.pencolor("Green")
+    if (raw2 == "3"):
+        t.pencolor("Yellow")
+    if (raw2 == "4"):
+        t.pencolor("Red")
+def square():
+    pencolor()
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+    t.left(90)
+    t.forward(100)
+
+def circle():
+    pencolor()
+    for x in range (100):
+        t.forward(1)
+        t.left(1)
+def spiral():
+    pencolor()
+    for x in range(100):
+        t.forward(40)
+        t.left(80)
+    
+def ask():
+    raw = input("What would you like to draw? \n 1. Square \n 2. Spiral \n 3. circle")
+    if (raw == "1"):
+        square()
+    if (raw == "2"):
+        spiral()
+    if (raw == "3"):
+        circle()
+while 1 == 1:
+    ask()
